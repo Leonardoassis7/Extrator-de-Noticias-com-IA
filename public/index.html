@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extrator de Noticias com IA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="layout">
+    <h1>Teste Tecnico - Desenvolvedor</h1>
+    <p class="subtitle">Extrator de Noticias com IA</p>
+
+    <section class="panel">
+      <h2>O que voce vai construir</h2>
+      <p>Uma aplicacao web onde o usuario cadastra URLs de noticias, o sistema extrai o conteudo e processa usando IA.</p>
+    </section>
+
+    <section class="panel">
+      <form id="extract-form" class="form">
+        <label for="url">URL da noticia</label>
+        <div class="row">
+          <input id="url" name="url" type="url" placeholder="https://g1.globo.com/..." required />
+          <button type="submit">Processar</button>
+        </div>
+      </form>
+      <p id="status" class="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2>URLs sugeridas para teste</h2>
+      <ul class="suggested" id="suggested-urls">
+        <li><button data-url="https://g1.globo.com/">https://g1.globo.com/...</button></li>
+        <li><button data-url="https://www1.folha.uol.com.br/">https://www1.folha.uol.com.br/...</button></li>
+        <li><button data-url="https://www.tecmundo.com.br/">https://www.tecmundo.com.br/...</button></li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Noticias processadas</h2>
+      <div id="results" class="results"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
